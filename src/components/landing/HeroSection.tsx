@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, BarChart2, CheckCircle, Star, Users, Settings, Sparkles } from 'lucide-react';
@@ -15,11 +14,6 @@ const HeroSection = () => {
         <div className="absolute top-1/2 -left-12 w-32 h-32 rounded-full bg-habit-blue/5 animate-float" style={{ animationDelay: "1.2s" }}></div>
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent"></div>
       </div>
-
-      {/* Floating shape elements */}
-      <div className="absolute top-20 left-[10%] w-2 h-2 bg-habit-purple rounded-full animate-pulse"></div>
-      <div className="absolute top-40 right-[15%] w-3 h-3 bg-habit-blue rounded-full animate-pulse" style={{ animationDelay: "0.5s" }}></div>
-      <div className="absolute bottom-32 left-[20%] w-4 h-4 bg-habit-green rounded-full animate-pulse" style={{ animationDelay: "1s" }}></div>
 
       <div className="container relative z-10">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
@@ -155,7 +149,6 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              {/* New notification element */}
               <div className="absolute -right-6 top-1/3 transform translate-x-1/2 -translate-y-1/2 h-auto w-32 rounded-xl border bg-background p-2 shadow-md animate-float" style={{ animationDelay: '1.8s' }}>
                 <div className="h-full w-full rounded-lg bg-green-50 p-2">
                   <div className="flex items-center">
