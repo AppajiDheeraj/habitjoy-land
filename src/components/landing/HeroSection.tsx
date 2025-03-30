@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, BarChart2, CheckCircle } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const HeroSection = () => {
   return (
@@ -40,10 +40,16 @@ const HeroSection = () => {
             
             <div className="flex items-center gap-4 pt-4">
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="h-8 w-8 rounded-full border-2 border-background bg-secondary flex items-center justify-center">
-                    <span className="text-xs">👤</span>
-                  </div>
+                {[
+                  { src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330", fallback: "AW" },
+                  { src: "https://images.unsplash.com/photo-1599566150163-29194dcaad36", fallback: "JD" },
+                  { src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d", fallback: "TD" },
+                  { src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb", fallback: "SR" }
+                ].map((profile, i) => (
+                  <Avatar key={i} className="h-8 w-8 border-2 border-background">
+                    <AvatarImage src={profile.src} alt="User" />
+                    <AvatarFallback className="bg-secondary text-xs">{profile.fallback}</AvatarFallback>
+                  </Avatar>
                 ))}
               </div>
               <div className="text-sm text-muted-foreground">
