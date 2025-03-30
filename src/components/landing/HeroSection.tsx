@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Award, Chart, CheckCircle } from 'lucide-react';
+import { ArrowRight, Award, BarChart2, CheckCircle } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -100,7 +100,7 @@ const HeroSection = () => {
               <div className="absolute -bottom-8 -left-8 h-28 w-40 rounded-2xl border bg-background p-2 shadow-lg animate-float" style={{ animationDelay: '1.5s' }}>
                 <div className="h-full w-full rounded-xl bg-blue-50 p-2 flex flex-col justify-center">
                   <div className="text-xs font-medium mb-1">Weekly Progress</div>
-                  <Chart className="h-5 w-5 text-habit-blue mb-1" />
+                  <BarChart2 className="h-5 w-5 text-habit-blue mb-1" />
                   <div className="flex justify-between h-8">
                     {[20, 45, 30, 80, 65, 45, 90].map((h, i) => (
                       <div key={i} className="w-2 bg-habit-blue/20 rounded-sm flex items-end">
