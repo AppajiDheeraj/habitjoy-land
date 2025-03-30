@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-
 const CTASection = () => {
-  return (
-    <section id="pricing" className="bg-gradient-to-br from-primary/5 to-accent/5 py-16 md:py-24">
+  return <section id="pricing" className="bg-gradient-to-br from-primary/5 to-accent/5 py-16 md:py-0">
       <div className="section-container">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -28,18 +25,10 @@ const CTASection = () => {
               </div>
               
               <ul className="mb-6 space-y-2 text-sm">
-                {[
-                  "Track up to 5 habits",
-                  "Basic streak tracking",
-                  "7-day habit history",
-                  "Daily reminders",
-                  "Basic achievements"
-                ].map((feature, i) => (
-                  <li key={i} className="flex items-center">
+                {["Track up to 5 habits", "Basic streak tracking", "7-day habit history", "Daily reminders", "Basic achievements"].map((feature, i) => <li key={i} className="flex items-center">
                     <CheckCircle className="mr-2 h-4 w-4 text-habit-green" />
                     <span>{feature}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
               
               <Button className="w-full" variant="outline">Get Started</Button>
@@ -60,20 +49,10 @@ const CTASection = () => {
               </div>
               
               <ul className="mb-6 space-y-2 text-sm">
-                {[
-                  "Unlimited habit tracking",
-                  "Advanced streak tracking",
-                  "Full habit history",
-                  "Smart reminders",
-                  "All achievements",
-                  "Detailed analytics",
-                  "Priority support"
-                ].map((feature, i) => (
-                  <li key={i} className="flex items-center">
+                {["Unlimited habit tracking", "Advanced streak tracking", "Full habit history", "Smart reminders", "All achievements", "Detailed analytics", "Priority support"].map((feature, i) => <li key={i} className="flex items-center">
                     <CheckCircle className="mr-2 h-4 w-4 text-habit-purple" />
                     <span>{feature}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
               
               <Button className="w-full">
@@ -94,21 +73,10 @@ const CTASection = () => {
               </div>
               
               <ul className="mb-6 space-y-2 text-sm">
-                {[
-                  "All Premium features",
-                  "Team habit tracking",
-                  "Group analytics",
-                  "Admin dashboard",
-                  "Team challenges",
-                  "Custom rewards",
-                  "API access",
-                  "Dedicated support"
-                ].map((feature, i) => (
-                  <li key={i} className="flex items-center">
+                {["All Premium features", "Team habit tracking", "Group analytics", "Admin dashboard", "Team challenges", "Custom rewards", "API access", "Dedicated support"].map((feature, i) => <li key={i} className="flex items-center">
                     <CheckCircle className="mr-2 h-4 w-4 text-habit-blue" />
                     <span>{feature}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
               
               <Button className="w-full" variant="outline">Contact Sales</Button>
@@ -116,8 +84,6 @@ const CTASection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CTASection;

@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { LineChart, BarChart3, PieChart, TrendingUp } from 'lucide-react';
-
 const StatsSection = () => {
-  return (
-    <section className="bg-accent/10 py-16 md:py-24">
+  return <section className="bg-accent/10 py-16 md:py-[5px]">
       <div className="section-container">
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="flex flex-col justify-center space-y-4">
@@ -17,19 +14,26 @@ const StatsSection = () => {
             </p>
             
             <ul className="space-y-4 mt-4">
-              {[
-                { icon: <LineChart className="h-5 w-5 text-habit-purple" />, text: "Track progress with beautiful interactive charts" },
-                { icon: <BarChart3 className="h-5 w-5 text-habit-blue" />, text: "Compare habits and identify correlations" },
-                { icon: <PieChart className="h-5 w-5 text-habit-green" />, text: "See time allocation across different habit categories" },
-                { icon: <TrendingUp className="h-5 w-5 text-habit-red" />, text: "Analyze streak data to boost consistency" }
-              ].map((item, i) => (
-                <li key={i} className="flex items-start animate-slide-in" style={{animationDelay: `${i * 0.1}s`}}>
+              {[{
+              icon: <LineChart className="h-5 w-5 text-habit-purple" />,
+              text: "Track progress with beautiful interactive charts"
+            }, {
+              icon: <BarChart3 className="h-5 w-5 text-habit-blue" />,
+              text: "Compare habits and identify correlations"
+            }, {
+              icon: <PieChart className="h-5 w-5 text-habit-green" />,
+              text: "See time allocation across different habit categories"
+            }, {
+              icon: <TrendingUp className="h-5 w-5 text-habit-red" />,
+              text: "Analyze streak data to boost consistency"
+            }].map((item, i) => <li key={i} className="flex items-start animate-slide-in" style={{
+              animationDelay: `${i * 0.1}s`
+            }}>
                   <div className="mr-3 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary/10">
                     {item.icon}
                   </div>
                   <span>{item.text}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
           
@@ -50,7 +54,9 @@ const StatsSection = () => {
                     <span>92% completed</span>
                   </div>
                   <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-accent/10">
-                    <div className="h-full bg-habit-purple rounded-full" style={{width: "92%"}}></div>
+                    <div className="h-full bg-habit-purple rounded-full" style={{
+                    width: "92%"
+                  }}></div>
                   </div>
                   
                   <div className="flex justify-between text-xs text-muted-foreground mt-4">
@@ -58,7 +64,9 @@ const StatsSection = () => {
                     <span>78% completed</span>
                   </div>
                   <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-accent/10">
-                    <div className="h-full bg-habit-blue rounded-full" style={{width: "78%"}}></div>
+                    <div className="h-full bg-habit-blue rounded-full" style={{
+                    width: "78%"
+                  }}></div>
                   </div>
                   
                   <div className="flex justify-between text-xs text-muted-foreground mt-4">
@@ -66,21 +74,20 @@ const StatsSection = () => {
                     <span>85% completed</span>
                   </div>
                   <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-accent/10">
-                    <div className="h-full bg-habit-green rounded-full" style={{width: "85%"}}></div>
+                    <div className="h-full bg-habit-green rounded-full" style={{
+                    width: "85%"
+                  }}></div>
                   </div>
                   
                   <div className="mt-8 flex-1">
                     <div className="flex h-full items-end justify-between">
-                      {[25, 40, 30, 50, 60, 45, 70, 65, 80, 75, 90, 85].map((height, index) => (
-                        <div key={index} className="w-1/12 group flex flex-col items-center">
+                      {[25, 40, 30, 50, 60, 45, 70, 65, 80, 75, 90, 85].map((height, index) => <div key={index} className="w-1/12 group flex flex-col items-center">
                           <div className="h-full w-3 rounded bg-accent/10 relative">
-                            <div
-                              className="absolute bottom-0 w-full rounded bg-habit-purple transition-all group-hover:bg-primary"
-                              style={{height: `${height}%`}}
-                            ></div>
+                            <div className="absolute bottom-0 w-full rounded bg-habit-purple transition-all group-hover:bg-primary" style={{
+                          height: `${height}%`
+                        }}></div>
                           </div>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                     <div className="mt-2 flex justify-between text-xs text-muted-foreground">
                       <span>Jan</span>
@@ -118,8 +125,6 @@ const StatsSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default StatsSection;
